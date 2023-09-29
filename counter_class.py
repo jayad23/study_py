@@ -1,4 +1,3 @@
-import subprocess
 from collections import Counter
 
 
@@ -23,17 +22,12 @@ def main():
 #         return (Counter(text.split()))
 
 #     words = count_words(fp.read())
+
 # THIS READS A TEXT FILE AND PRINTS IT
 fp = open('texto.txt', 'r')
 for i, line in enumerate(iter(fp.readline, '')):
-    subprocess.run(["say", line])
+    print(line)
 # THIS DOES IT TOO
 # with open('texto.txt', 'r') as file:
 #     text = file.read()
 #     print(text)
-
-
-text_to_read = "Hello, this is a test."
-
-# Use the macOS built-in TTS engine (say) to read the text aloud
-# subprocess.run(["say", text_to_read])
